@@ -1,0 +1,13 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>Copyright (C) 2012 by original authors @ fontello.com</metadata>
+<defs>
+<font id="fontello" horiz-adv-x="1000" >
+<font-face font-family="fontello" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
+<missing-glyph horiz-adv-x="1000" />
+<glyph glyph-name="heart" unicode="&#xe801;" d="M500-79q-15 0-25 10l-348 336q-6 4-15 15t-31 37-38 54-30 68-13 77q0 123 71 192t196 69q35 0 71-12t67-32 53-38 42-38q20 20 42 38t53 38 67 32 71 12q125 0 196-69t71-192q0-123-128-251l-348-335q-10-10-25-10z" horiz-adv-x="1000" />
+<glyph glyph-name="ie" unicode="&#xe800;" d="M844 850c-81-1-181-46-281-106-239 35-499-104-510-386 60 93 224 257 367 301l0-14c-179-90-571-612-361-773 91-69 311 37 345 76 29-5 58-8 89-8 201 0 371 124 424 292l-301 0c-12-57-55-93-120-93-103 0-126 69-126 152l561 0c29 203-114 384-306 439 174 114 363 161 299-104l19 0c35 109 22 191-38 213-18 7-37 10-58 10-1 0-3 0-4 0z m-352-303c79 0 128-47 128-128l-252 0c0 77 46 128 124 128z m-367-422c59-83 150-144 256-170-77-59-226-84-266-52-48 40-36 124 10 223z" horiz-adv-x="944" />
+</font>
+</defs>
+</svg>

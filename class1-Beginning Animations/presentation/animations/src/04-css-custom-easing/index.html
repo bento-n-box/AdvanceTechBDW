@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js ie6 oldie" lang="en"><![endif]-->
+<!--[if IE 7]><html class="no-js ie7 oldie" lang="en"><![endif]-->
+<!--[if IE 8]><html class="no-js ie8 oldie" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+	<title>Front-End Intro to HTML5 Animation</title>
+
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="description" content="Front-End Intro to HTML5 Animation" />
+	<meta name="viewport" content="width=device-width" />
+
+	<link rel="shortcut icon" href="../../assets/img/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="../../assets/css/main.css">
+
+	<!-- Demo CSS -->
+	<style>
+	#box {
+		width: 100px;
+		height: 100px;
+		background-color: #600;
+		font: normal normal bold 36px/100px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+		text-align: center;
+		color: #fff;
+		cursor: pointer;
+
+		-webkit-transition: margin-left 600ms cubic-bezier(1.000, 0.000, 0.000, 1.000);
+		-moz-transition: margin-left 600ms cubic-bezier(1.000, 0.000, 0.000, 1.000);
+		-o-transition: margin-left 600ms cubic-bezier(1.000, 0.000, 0.000, 1.000);
+		transition: margin-left 600ms cubic-bezier(1.000, 0.000, 0.000, 1.000);
+	}
+
+	#box.slide {
+		margin-left: 566px;
+	}
+	</style>
+
+	<script src="../../assets/js/vendor/modernizr-2.6.2.min.js"></script>
+</head>
+<body>
+
+<div id="wrapper">
+	<div id="content">
+		<h1>Custom CSS Easing</h1>
+		<p><a href="http://matthewlein.com/ceaser/" target="_new">http://matthewlein.com/ceaser/</a></p>
+		<div id="box">1</div>
+	</div>
+</div>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
+
+<!-- Demo JS -->
+<script>
+$(function() {
+	var $b = $('#box');
+
+	$b.on('click', function(e) {
+		$b.toggleClass('slide');
+	});
+});
+</script>
+
+</body>
+</html>

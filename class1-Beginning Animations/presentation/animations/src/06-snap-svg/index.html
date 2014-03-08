@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js ie6 oldie" lang="en"><![endif]-->
+<!--[if IE 7]><html class="no-js ie7 oldie" lang="en"><![endif]-->
+<!--[if IE 8]><html class="no-js ie8 oldie" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+	<title>Front-End Intro to HTML5 Animation</title>
+
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="description" content="Front-End Intro to HTML5 Animation" />
+	<meta name="viewport" content="width=device-width" />
+
+	<link rel="shortcut icon" href="../../assets/img/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="../../assets/css/main.css">
+
+	<!-- Demo CSS -->
+	<style>
+	#box {
+		position: relative;
+		width: 240px;
+		height: 146px;
+		background-color: #666;
+		overflow: hidden;
+	}
+
+	#preloader {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 66px;
+		height: 66px;
+		margin: -33px 0 0 -33px;
+	}
+
+	#gif {
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		height: 100%;
+		display: none;
+	}
+	</style>
+
+	<script src="../../assets/js/vendor/modernizr-2.6.2.min.js"></script>
+</head>
+<body>
+
+<div id="wrapper">
+	<svg id="content">
+	
+	</svg>
+</div>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
+<script src="../../assets/js/vendor/jquery.easing.1.3.js"></script>
+<script src="../../assets/js/snap.svg-min.js"></script>
+
+<!-- Demo JS -->
+<script>
+$(function() {
+	$(window).on('load', function() {
+
+
+		var s = Snap("#content");
+
+		var bigCircle = s.circle(150, 150, 100);
+		
+		 var attr = {
+		    fill: "#bada55",
+		    stroke: "#000",
+		    strokeWidth: 5
+		};
+
+		bigCircle.attr(attr);
+
+		s.path("M93,83.35L72.904,63.254c4.119-5.989,6.535-13.232,6.535-21.033C79.439,21.697,62.742,5,42.22,5C21.697,5,5,21.697,5,42.221  c0,20.522,16.697,37.22,37.22,37.22c7.801,0,15.045-2.417,21.034-6.534L83.35,93.002C84.682,94.334,86.428,95,88.176,95  c1.746,0,3.492-0.666,4.824-1.998C95.666,90.336,95.666,86.015,93,83.35z M15.92,42.221c0-14.502,11.798-26.3,26.3-26.3  c14.502,0,26.299,11.798,26.299,26.3c0,14.501-11.797,26.3-26.299,26.3C27.718,68.521,15.92,56.722,15.92,42.221z").attr({
+			fill: "#fff",
+		    stroke: "#bada55"
+		});
+
+		
+		var p = s.path("M10-5-10,15M15,0,0,15M0-5-20,15").attr({
+		        fill: "none",
+		        stroke: "#bada55",
+		        strokeWidth: 5
+		    });
+		
+		p = p.pattern(0, 0, 10, 10);
+		
+		bigCircle.attr({
+		    fill: p
+		});
+		
+		$('#content').on('click', function(e) {
+			var radius = (bigCircle.attr('r') === '100') ? '50' : '100';
+			bigCircle.animate({r: radius }, 1000);
+		});
+		
+	});
+});
+</script>
+
+</body>
+</html>
