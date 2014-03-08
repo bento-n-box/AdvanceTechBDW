@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  h1 User List
+  ul
+    each user, i in users
+      li #{users[i].name}   
+        a(href="/remove/#{users[i].name}") delete
+  form(method="post", action="/add")
+    input(type="text", name="name")
+    input(type="submit", value="add User")
